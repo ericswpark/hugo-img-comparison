@@ -2,7 +2,28 @@
 
 Shortcode to add the `img-comparison-slider` library and frame in Hugo documents
 
-# Usage
+# Installation
+
+## Hugo Module
+
+1. Add the repository as a Hugo module
+
+```
+hugo mod get github.com/ericswpark/hugo-img-comparison
+```
+
+2. Add to your `config.toml`:
+
+```toml
+# Modules
+[module]
+  # Other module imports here...
+  [[module.imports]]
+    path = "github.com/ericswpark/hugo-img-comparison"
+    disable = false
+```
+
+## Git Submodule (deprecated)
 
 1. Add the repository as a submodule
 
@@ -16,9 +37,10 @@ git submodule add https://github.com/ericswpark/hugo-img-comparison.git themes/h
 theme = ["hugo-img-comparison", "default-theme-name"]
 ```
 
-3. Add the following snippet where you want to embed image comparison sliders:
+# Usage
+
+Add the following snippet where you want to embed image comparison sliders:
 
 ```
 {{< imgcmp left="left.png" right="right.png" >}}
 ```
-
